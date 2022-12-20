@@ -6,12 +6,11 @@ def safe_print_integer(value):
     try:
         value = int(value)
     
-    except ValueError:
+    except (TypeError, ValueError):
         flag = False
 
     else:
         print("{:d}".format(value))
-        print("")
     
     finally:
         return (flag)
